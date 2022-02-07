@@ -17,7 +17,7 @@ namespace WebServiceFramework1
     public class WebService2 : System.Web.Services.WebService
     {
 
-        [WebMethod(EnableSession =true)]
+        [WebMethod(EnableSession =true, Description=" Add Two Numbers") ]
         public int Addition(int firstnum, int secondnum)
         {
             List<string> Values;
@@ -35,7 +35,7 @@ namespace WebServiceFramework1
             Session["Calculations"] = Values;
             return firstnum + secondnum;
         }
-        [WebMethod(EnableSession =true)]
+        [WebMethod(EnableSession =true, Description ="Shows all Current Additions")]
         public List<string> GetCalculations()
         {
 
